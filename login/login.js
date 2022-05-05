@@ -18,7 +18,7 @@ function registerPasswordVisiblityToggle() {
         const type = password.getAttribute("type") === "password" ? "text" : "password";
         password.setAttribute("type", type);
         const icon = type == 'password' ? 'show' : 'hide'
-        const passwordToggleIcon = `<img src='./assets/password_${icon}.svg' />`
+        const passwordToggleIcon = `<img src='../assets/password_${icon}.svg' />`
         toggleIcon.innerHTML = ''
         toggleIcon.innerHTML = passwordToggleIcon
     });
