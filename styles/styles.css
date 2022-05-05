@@ -237,6 +237,14 @@ button[type="submit"] {
     font-weight: 400;
     font-family: var(--font-family-open-sans);
     font-size: 11px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: var(--gap-5);
+}
+
+.info_text.error {
+    color: var(--error-color);
 }
 
 .header {

@@ -1,5 +1,8 @@
 
-
+document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault()
+    showError('<img src="../assets/error_icon.svg" />Passwords must contain at least eight characters, including at least one letter and one number')
+})
 
 registerPasswordVisiblityToggle()
 
@@ -26,4 +29,11 @@ function registerPasswordVisiblityToggle() {
         confirmToggleIcon.innerHTML = ''
         confirmToggleIcon.innerHTML = passwordToggleIcon
     });
+}
+
+function showError(error) {
+    const element = document.querySelector('.info_text');
+    element.innerHTML = error;
+    element.classList.add('error')
+    document.querySelector('#password_section').classList.add('error')
 }
