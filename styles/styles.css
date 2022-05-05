@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Poppins:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;500;700&family=Poppins:wght@300;400;500;700&display=swap');
 
 :root {
     --primary-color: #F8C24F;
@@ -6,6 +6,7 @@
     --regular-font-weight: 400;
     --thin-font-weight: 100;
     --bold-font-weight: 700;
+    --semi-bold-font-weight: 600;
     --light-font-weight: 300;
     --border-radius: 0.5em;
     --viewport-height: 100vh;
@@ -17,6 +18,7 @@
     --link-color: #6DA3E7;
     --font-family-lato: 'Lato', sans-serif;
     --font-family-poppins: 'Poppins', sans-serif;
+    --font-family-open-sans: 'Open Sans', sans-serif;;
     --content-width: 400px;
     --gap-20: 20px;
     --gap-10: 10px;
@@ -83,7 +85,7 @@
 
 .text_field > input {
     border: none;
-    padding: 3px;
+    padding: 4px;
     outline: none;
     flex: 1;
     width: var(--max-width);
@@ -109,7 +111,7 @@ button[type="submit"] {
     border-radius: 0.5em;
     font-size: medium;
     background-color: var(--secondary-color);
-    font-weight: var(--bold-font-weight);
+    font-weight: var(--semi-bold-font-weight);
     cursor: pointer;
 }
 
@@ -228,5 +230,18 @@ button[type="submit"] {
     outline: none;
     background-color: transparent;
     cursor: pointer;
+}
+
+/* Change Password Page */
+.info_text {
+    font-weight: 400;
+    font-family: var(--font-family-open-sans);
+    font-size: 11px;
+}
+
+.header {
+    font-weight: 600;
+    font-size: 18px;
+    font-family: var(--font-family-lato);
 }
 
