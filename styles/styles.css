@@ -19,11 +19,12 @@
     --font-family-lato: 'Lato', sans-serif;
     --font-family-poppins: 'Poppins', sans-serif;
     --font-family-open-sans: 'Open Sans', sans-serif;;
-    --content-width: 400px;
+    --content-width: 370px;
     --gap-20: 20px;
     --gap-10: 10px;
     --gap-5: 5px;
     --error-color: #FF0000;
+    --default-transition: all 200ms ease-in;
 }
 
 *, 
@@ -50,7 +51,7 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    gap: var(--gap-20);
+    gap: var(--gap-10);
 }
 
 .cmd_logo {
@@ -67,7 +68,7 @@
     flex-direction: column;
     background-color: white;
     gap: var(--gap-10);
-    padding: 2em 1em;
+    padding: 1em;
     border-radius: var(--border-radius);
     box-sizing: border-box;
 }
@@ -83,7 +84,7 @@
     justify-content: center;
 }
 
-.text_field > input {
+.text_field input {
     border: none;
     padding: 4px;
     outline: none;
@@ -91,6 +92,12 @@
     width: var(--max-width);
     font-weight: var(--regular-font-weight);
     box-sizing: border-box;
+}
+
+.text_field input::placeholder {
+    font-weight: var(--regular-font-weight);
+    font-size: 14px;
+    color: #97A0AD;
 }
 
 .text_field:hover, .text_field:focus-within {
@@ -157,20 +164,19 @@ button[type="submit"] {
     width: var(--max-width);
     display: flex;
     flex-direction: column;
-    gap: var(--gap-5);
     justify-content: center;
     align-items: center;
 }
 
 .more_options > p {
     font-size: small;
-    font-weight: var();
+    font-weight: var(--semi-bold-font-weight);
 }
 
 .more_options .link {
     font-size: small;
     color: var(--link-color);
-    font-weight: var(--regular-font-weight);
+    font-weight: var(--semi-bold-font-weight);
 }
 
 .more_options > .link {
@@ -235,7 +241,7 @@ button[type="submit"] {
 /* Change Password Page */
 .info_text {
     font-weight: 400;
-    font-family: var(--font-family-open-sans);
+    font-family: var(--font-family-poppins);
     font-size: 11px;
     display: flex;
     align-items: start;

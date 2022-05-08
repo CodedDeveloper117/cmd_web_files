@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="./sign-up.css"/
+</head>
+<body>
+    <div class="container">
+        <div class="sign_up_container">
+            <div class="left_section">
+                <img src="../assets/cmd.svg" />
+                <p>A space to share knowledge, ask questions and 
+                    better understand tech.</p>
+            </div>
+            <div class="right_section">
+                <form class="content" action="" method="post" id="form">
+                    <div class="text_field" id="first_name_section">
+                        <input placeholder="First name" type="text" />
+                    </div>
+                    <div class="text_field" id="last_name_section">
+                        <input placeholder="Last name" type="text" />
+                    </div>
+                    <div class="text_field" id="tech_track_section">
+                        <span id="tech_track_placeholder">Tech track(s)</span>
+                        <div class="menu" id="menu">
+                            
+                        </div>
+                        <div id="choice_content" class="choice"></div>
+                        <button type="button" id="drop-down" class="toggle_icon"><img src="../assets/drop_down.svg" /></button>
+                    </div>
+                    <div class="text_field" id="email_section">
+                        <input placeholder="Email address" type="email" />
+                    </div>
+                    <div class="text_field" id="password_section">
+                        <input placeholder="Password" type="password" id="password" />
+                        <button class="toggle_icon"><img src="../assets/password_show.svg" /></button>
+                    </div>
+                    <p class="info_text">Passwords must contain at least eight characters, including at
+                        least one letter and one number</p>
+                    <button type="submit">Sign in</button>
+                    <p class="conditions">By clicking “Sign Up”, you agree to our <a>Terms, Privacy Policy</a> and <a>Cookie Policy</a>.</p>
+                    <div class="or_container">
+                        <div style="flex: 1;"></div>
+                        <div class="dash"></div>
+                        <p>OR</p>
+                        <div class="dash"></div>
+                        <div style="flex: 1;"></div>
+                    </div>
+                    <div class="methods">
+                        <a class="icon" href="#">
+                            <img src="../assets/google.svg" />
+                        </a>
+                        <a class="icon" href="#">
+                            <img src="../assets/facebook.svg" />
+                        </a>
+                        <a class="icon" href="#">
+                            <img src="../assets/github.svg" />
+                        </a>
+                    </div>
+                </form>
+                <div class="more_options">
+                    <p>Already have an Account? <a href="#" class="link">Sign in</a></p>
+                    <a href="#" class="link">Skip to Home</a>
+                </div>
+                <div style="padding: 10px;"></div>
+            </div>
+            <div class="bottom_section">
+                <div class="bottom_section_item">
+                    <a href="#">English(UK)</a>
+                    <a href="#">English(US)</a>
+                    <a href="#">Francais</a>
+                    <a href="#">Espanol</a>
+                </div>
+                <div class="bottom_section_item">
+                    <a href="#">About</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Cookie</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <script src="./sign-up.js"></script>
+</body>
+</html>
