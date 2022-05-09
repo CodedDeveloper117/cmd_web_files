@@ -4,8 +4,9 @@ const menuItems = document.querySelectorAll('input[type="checkbox"]')
 const choiceInput = document.querySelector('#choice');
 const choiceContent = document.querySelector('#choice_content');
 const techTrackPlaceholder = document.querySelector('#tech_track_placeholder')
+const techTrackInput = document.querySelector('#tech_track_input')
 
-const techTracks = [
+let techTracks = [
     { isChecked: false, track: 'Android Development' },
     { isChecked: false, track: 'Cloud Computing' },
     { isChecked: false, track: 'Copy writing' },
@@ -28,6 +29,7 @@ dropdownToggle.addEventListener('click', () => {
 function updateMenuItemUi() {
     menu.innerHTML = ''
     techTracks.forEach((choice, index) => {
+        if(index > 8) return;
         const element = createMenuItem(choice)
         const menuItem = document.createElement('div')
         menuItem.className = "menu_item"
@@ -39,14 +41,28 @@ function updateMenuItemUi() {
         })
         menu.append(menuItem)
     })
+    menu.append(addTechTrackInput())
 }
 
 updateMenuItemUi()
 
-
-
 function createMenuItem(choice) {
     return `<input type="checkbox" /><span>${choice.track}</span>`
+}
+
+function addTechTrackInput() {
+    const input = document.createElement('input')
+    input.placeholder = "Other(s)"
+    input.id = "tech_track_input"
+    input.addEventListener('keypress', (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            const item = {isChecked: true, track: e.target.value}
+            techTracks.push(item)
+            updateUi(item, techTracks.length - 1)
+        }
+    })
+    return input;
 }
 
 function createChoiceItem(index, choice) {
@@ -65,7 +81,15 @@ function updateUi(item, index) {
         cancelButton.addEventListener('click', () => {
             choiceContent.removeChild(choiceItem)
             if (menu.classList.contains('active')) menu.classList.remove('active')
-            techTracks[index].isChecked = false;
+            
+            if(index > 8) {
+                techTracks = techTracks.filter((item, index) => {
+                    return index < 9;
+                })
+            } else {
+                techTracks[index].isChecked = false;
+            }
+            console.log(techTracks)
             updateTechTrack()
             updateMenuItemUi()
         })
