@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="./sign-up.css"/
-</head>
+    <link rel="stylesheet" href="./sign-up.css" / </head>
+
 <body>
     <div class="container">
         <div class="sign_up_container">
             <div class="left_section">
                 <img src="../assets/cmd.svg" />
-                <p>A space to share knowledge, ask questions and 
+                <p>A space to share knowledge, ask questions and
                     better understand tech.</p>
             </div>
             <div class="right_section">
                 <form class="content" action="" method="post" id="form">
                     <div class="text_field" id="first_name_section">
-                        <input placeholder="First name" type="text" />
+                        <input placeholder="First name" required type="text" />
                     </div>
                     <div class="text_field" id="last_name_section">
-                        <input placeholder="Last name" type="text" />
+                        <input placeholder="Last name" required type="text" />
                     </div>
                     <div class="text_field" id="tech_track_section">
                         <span id="tech_track_placeholder">Tech track(s)</span>
                         <div class="menu" id="menu">
-                            
+
                         </div>
                         <div id="choice_content" class="choice"></div>
-                        <button type="button" id="drop-down" class="toggle_icon"><img src="../assets/drop_down.svg" /></button>
+                        <button type="button" id="drop-down" class="toggle_icon"><img
+                                src="../assets/drop_down.svg" /></button>
                     </div>
                     <div class="text_field" id="email_section">
-                        <input placeholder="Email address" type="email" />
+                        <input id="email" placeholder="Email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            required type="email" />
                     </div>
                     <div class="text_field" id="password_section">
                         <input placeholder="Password" type="password" id="password" />
-                        <button class="toggle_icon"><img src="../assets/password_show.svg" /></button>
+                        <button type="button" id="toggle" class="toggle_icon"><img src="../assets/password_show.svg" /></button>
                     </div>
                     <p class="info_text">Passwords must contain at least eight characters, including at
                         least one letter and one number</p>
                     <button type="submit">Sign in</button>
-                    <p class="conditions">By clicking “Sign Up”, you agree to our <a>Terms, Privacy Policy</a> and <a>Cookie Policy</a>.</p>
+                    <p class="conditions">By clicking “Sign Up”, you agree to our <a>Terms, Privacy Policy</a> and
+                        <a>Cookie Policy</a>.
+                    </p>
                     <div class="or_container">
                         <div style="flex: 1;"></div>
                         <div class="dash"></div>
@@ -83,7 +88,8 @@
                 </div>
             </div>
         </div>
-    </div>  
+    </div>
     <script src="./sign-up.js"></script>
 </body>
+
 </html>
